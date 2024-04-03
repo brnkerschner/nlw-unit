@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale("pt-br");
+    </script>
+
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Lista de Participantes - Evento <nlw/> unit</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img src="img/code.png" width="50px" alt="imagem icone developer" />
+      </header>
+
+      <form onsubmit="adicionarParticipante(event)">
+        <fieldset>
+          <legend>Inscrição</legend>
+          <div>
+            <div class="input-wrapper">
+              <img src="img/user.png" " alt="imagem user">
+              <input
+                type="text"
+                placeholder="Nome completo"
+                name="nome"
+                required=""
+              />
+            </div>
+            <div class="input-wrapper">
+              <img src="img/email.png" " alt="imagem email">
+              <input
+                type="Email"
+                placeholder="Email"
+                name="email"
+                required=""
+              />
+            </div>
+            <button>REALIZAR INSCRIÇÃO</button>
+          </div>
+        </fieldset>
+      </form>
+      <section class="lista-participantes">
+        <h2>Participantes</h2>
+        <div>
+          <table width="100%">
+            <thead style="text-align: left">
+              <tr>
+                <th>Participante</th>
+                <th>Data da inscrição</th>
+                <th>Data do check-in</th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
